@@ -6,3 +6,7 @@ all:
 	xdg-open out.png
 clean:
 	rm sigs out.dot out.svg out.png||:
+install:
+	cp sigs2dot.py /usr/local/bin/sigs2dot
+uninstall:
+	rm /usr/local/bin/sigs2dot
