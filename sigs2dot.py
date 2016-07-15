@@ -20,6 +20,8 @@ inuid = False
 print("digraph test {")
 # print("\tsize=\"24,24\";")
 # print("\tratio=1;")
+print("\tsplines=true;")
+print("\toverlap=false;")
 print("\tgraph [overlap = false];")
 for line in f:
     if "User ID not found" in line:
