@@ -10,7 +10,7 @@ def sanitize2(s):
     for char in ["\""]:
         s = s.replace(char,"")
     return s
-def get(label, second = False, rev = False):
+def get(label, rev = False):
     s = "\"" + sanitize2(label) + "\""
     if rev:
         s += '[color="red",label="revocation"]'
@@ -45,5 +45,5 @@ for line in f:
             rev = line[:3] == "rev"
         else:
             continue
-        print("\t" + get(currentsig) + " -> " + get(current_id, True, rev) + ";")
+        print("\t" + get(currentsig) + " -> " + get(current_id, rev) + ";")
 print("}")
